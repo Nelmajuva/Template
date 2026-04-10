@@ -7,10 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:eudoo-consultorias": "node dist/eudoo-consultorias/server/server.mjs"
+    "prettier": "npx prettier --write .",
+    "serve": "bun dist/eudoo-consultorias/server/server.mjs",
+    "dev": "bun --watch run dist/eudoo-consultorias/server/server.mjs"
   },
   "prettier": {
-    "printWidth": 100,
+    "printWidth": 240,
     "singleQuote": true,
     "overrides": [
       {
@@ -32,16 +34,17 @@
     "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
     "@angular/ssr": "^21.1.0",
-    "express": "^5.1.0",
+    "@tailwindcss/postcss": "^4.2.2",
+    "postcss": "^8.5.8",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.2.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^21.1.0",
     "@angular/cli": "^21.1.0",
     "@angular/compiler-cli": "^21.1.0",
-    "@types/express": "^5.0.1",
-    "@types/node": "^20.17.19",
+    "@types/bun": "^1.3.11",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

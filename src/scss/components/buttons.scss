@@ -1,0 +1,103 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 text-base font-medium
+           rounded-lg transition-colors duration-200
+           focus:outline-none cursor-pointer;
+  }
+
+  .btn-light {
+    @apply bg-gray-50 text-gray-700 hover:bg-gray-100;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+
+  .btn-light-primary {
+    @apply bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+  }
+
+  .btn-light-secondary {
+    @apply bg-gray-50 text-gray-700 hover:bg-gray-100;
+  }
+
+  .btn-success {
+    @apply bg-green-500 text-white hover:bg-green-600;
+  }
+
+  .btn-light-success {
+    @apply bg-green-50 text-green-600 hover:bg-green-600 hover:text-white;
+  }
+
+  .btn-info {
+    @apply bg-violet-600 text-white hover:bg-violet-700;
+  }
+
+  .btn-light-info {
+    @apply bg-violet-50 text-violet-700 hover:bg-violet-700 hover:text-white;
+  }
+
+  .btn-warning {
+    @apply bg-yellow-500 text-white hover:bg-yellow-600;
+  }
+
+  .btn-light-warning {
+    @apply bg-yellow-50 text-yellow-600 hover:bg-yellow-600 hover:text-white;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+  }
+
+  .btn-light-danger {
+    @apply bg-red-50 text-red-600 hover:bg-red-600 hover:text-white;
+  }
+
+  .btn-dark {
+    @apply bg-gray-900 text-white hover:bg-gray-800;
+  }
+
+  .btn-light-dark {
+    @apply bg-gray-800 text-white hover:bg-gray-700;
+  }
+
+  .hover-elevate-up {
+    @apply transition-transform duration-200;
+    &:hover {
+      @apply -translate-y-1;
+    }
+  }
+
+  .hover-elevate-down {
+    @apply transition-transform duration-200;
+    &:hover {
+      @apply translate-y-1;
+    }
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200;
+    &:hover {
+      @apply scale-110;
+    }
+  }
+
+  .hover-rotate-end {
+    @apply transition-transform duration-200;
+    &:hover {
+      @apply rotate-3;
+    }
+  }
+
+  .hover-rotate-start {
+    @apply transition-transform duration-200;
+    &:hover {
+      @apply -rotate-3;
+    }
+  }
+}

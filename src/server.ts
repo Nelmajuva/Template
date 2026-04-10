@@ -1,68 +1,40 @@
-import {
-  AngularNodeAppEngine,
-  createNodeRequestHandler,
-  isMainModule,
-  writeResponseToNodeResponse,
-} from '@angular/ssr/node';
-import express from 'express';
+import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
+
+import { watch } from 'node:fs';
 import { join } from 'node:path';
 
-const browserDistFolder = join(import.meta.dirname, '../browser');
+const angularApp = new AngularAppEngine();
+const reqHandler = createRequestHandler((req) => angularApp.handle(req));
 
-const app = express();
-const angularApp = new AngularNodeAppEngine();
+if (typeof Bun !== 'undefined') {
+  const browserDistFolder = join(import.meta.dir, '../browser');
 
-/**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/{*splat}', (req, res) => {
- *   // Handle API request
- * });
- * ```
- */
+  const server = Bun.serve({
+    port: process.env['PORT'] ?? 4000,
+    async fetch(req: Request) {
+      const url = new URL(req.url);
 
-/**
- * Serve static files from /browser
- */
-app.use(
-  express.static(browserDistFolder, {
-    maxAge: '1y',
-    index: false,
-    redirect: false,
-  }),
-);
+      const file = Bun.file(join(browserDistFolder, url.pathname));
+      if (await file.exists()) {
+        return new Response(file, {
+          headers: { 'Cache-Control': 'no-cache' },
+        });
+      }
 
-/**
- * Handle all other requests by rendering the Angular application.
- */
-app.use((req, res, next) => {
-  angularApp
-    .handle(req)
-    .then((response) =>
-      response ? writeResponseToNodeResponse(response, res) : next(),
-    )
-    .catch(next);
-});
-
-/**
- * Start the server if this module is the main entry point, or it is ran via PM2.
- * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
- */
-if (isMainModule(import.meta.url) || process.env['pm_id']) {
-  const port = process.env['PORT'] || 4000;
-  app.listen(port, (error) => {
-    if (error) {
-      throw error;
-    }
-
-    console.log(`Node Express server listening on http://localhost:${port}`);
+      return (await angularApp.handle(req)) ?? new Response('Not found', { status: 404 });
+    },
   });
+
+  console.log(`Bun server listening on http://local.eudoo.com.co:${server.port}`);
+
+  if (process.env['NODE_ENV'] !== 'production') {
+    const watcher = watch(browserDistFolder, { recursive: true }, (event, filename) => {
+      console.log(`[HMR] File changed: ${filename} — reloading...`);
+      server.reload({ fetch: server.fetch });
+    });
+
+    process.on('exit', () => watcher.close());
+  }
 }
 
-/**
- * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
- */
-export const reqHandler = createNodeRequestHandler(app);
+export { reqHandler };

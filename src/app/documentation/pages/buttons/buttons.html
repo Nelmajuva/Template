@@ -1,0 +1,86 @@
+<h1 class="text-3xl font-medium text-gray-900 mb-6">TailwindCSS Buttons</h1>
+<p class="text-gray-500 mb-8">
+  Personaliza los botones mediante las clases utilitarias creadas de TailwindCSS. Usa <code class="bg-purple-100 px-1.5 py-0.5 rounded text-purple-600">{{ '.btn-{color}' }}</code>
+  para definir el color base del botón.
+</p>
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Base Buttons</h2>
+<p class="text-gray-500 mb-5">
+  Usa <code class="bg-purple-100 px-1.5 py-0.5 rounded text-purple-600">{{ '.btn-{color}' }}</code>
+  para establecer el color del botón según la paleta existente.
+</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <button type="button" class="btn btn-light">Claro</button>
+  <button type="button" class="btn btn-primary">Primario</button>
+  <button type="button" class="btn btn-secondary">Secundario</button>
+  <button type="button" class="btn btn-success">Exitoso</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Advertencia</button>
+  <button type="button" class="btn btn-danger">Peligro</button>
+  <button type="button" class="btn btn-dark">Oscuro</button>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"&gt;</span><span class="text-white">Claro</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-primary</span><span class="text-gray-400">"&gt;</span><span class="text-white">Primario</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-secondary</span><span class="text-gray-400">"&gt;</span><span class="text-white">Secundario</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-success</span><span class="text-gray-400">"&gt;</span><span class="text-white">Exitoso</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-info</span><span class="text-gray-400">"&gt;</span><span class="text-white">Info</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-warning</span><span class="text-gray-400">"&gt;</span><span class="text-white">Advertencia</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-danger</span><span class="text-gray-400">"&gt;</span><span class="text-white">Peligro</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-dark</span><span class="text-gray-400">"&gt;</span><span class="text-white">Oscuro</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Hover Effects</h2>
+<p class="text-gray-500 mb-5">
+  Usa <code class="bg-purple-100 px-1.5 py-0.5 rounded text-purple-600">{{ '.btn-hover-{color}' }}</code>
+  para configurar los diversos efectos para los botones.
+</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <button type="button" class="btn btn-primary hover-elevate-up">Arriba</button>
+  <button type="button" class="btn btn-primary hover-elevate-down">Abajo</button>
+  <button type="button" class="btn btn-danger hover-scale">Aumentar</button>
+  <button type="button" class="btn btn-success hover-rotate-end">Giro final</button>
+  <button type="button" class="btn btn-warning hover-rotate-start">Giro inicial</button>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-primary hover-elevate-up</span><span class="text-gray-400">"&gt;</span><span class="text-white">Arriba</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-primary hover-elevate-down</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abajo</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-danger hover-scale</span><span class="text-gray-400">"&gt;</span><span class="text-white">Aumentar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-success hover-rotate-end</span><span class="text-gray-400">"&gt;</span><span class="text-white">Giro final</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-warning hover-rotate-start</span><span class="text-gray-400">"&gt;</span><span class="text-white">Giro inicial</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Buttons Light</h2>
+<p class="text-gray-500 mb-5">
+  Usa <code class="bg-purple-100 px-1.5 py-0.5 rounded text-purple-600">{{ '.btn-light-{color}' }}</code>
+  para establecer el estilo de luz de un botón.
+</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <button type="button" class="btn btn-light-primary">Primario</button>
+  <button type="button" class="btn btn-light-secondary">Secundario</button>
+  <button type="button" class="btn btn-light-success">Exitoso</button>
+  <button type="button" class="btn btn-light-info">Info</button>
+  <button type="button" class="btn btn-light-warning">Advertencia</button>
+  <button type="button" class="btn btn-light-danger">Peligro</button>
+  <button type="button" class="btn btn-light-dark">Oscuro</button>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-primary</span><span class="text-gray-400">"&gt;</span><span class="text-white">Primario</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-secondary</span><span class="text-gray-400">"&gt;</span><span class="text-white">Secundario</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-success</span><span class="text-gray-400">"&gt;</span><span class="text-white">Exitoso</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-info</span><span class="text-gray-400">"&gt;</span><span class="text-white">Info</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-warning</span><span class="text-gray-400">"&gt;</span><span class="text-white">Advertencia</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-danger</span><span class="text-gray-400">"&gt;</span><span class="text-white">Peligro</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light-dark</span><span class="text-gray-400">"&gt;</span><span class="text-white">Oscuro</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span></code></pre>
+</div>
