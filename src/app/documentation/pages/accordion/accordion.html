@@ -60,7 +60,22 @@
 </div>
 
 <div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
-  <pre class="text-sm leading-relaxed"><code></code></pre>
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordion</span> <span class="text-yellow-300">[defaultOpen]</span><span class="text-gray-400">="</span><span class="text-green-400">0</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion</span><span class="text-gray-400">"&gt;</span>
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordionItem</span> <span class="text-yellow-300">#item1</span><span class="text-gray-400">="</span><span class="text-green-400">appAccordionItem</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-item</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-header</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[attr.aria-expanded]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">(click)</span><span class="text-gray-400">="</span><span class="text-green-400">item1.toggle()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+      <span class="text-white">Accordion Item #1</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-wrapper</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-inner</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido del primer elemento.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
 </div>
 
 <h2 class="text-3xl font-medium text-gray-900 mb-6">Simultáneos</h2>
@@ -123,7 +138,22 @@
 </div>
 
 <div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
-  <pre class="text-sm leading-relaxed"><code></code></pre>
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordion</span> <span class="text-yellow-300">[multi]</span><span class="text-gray-400">="</span><span class="text-green-400">true</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[defaultOpen]</span><span class="text-gray-400">="</span><span class="text-green-400">null</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion</span><span class="text-gray-400">"&gt;</span>
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordionItem</span> <span class="text-yellow-300">#item4</span><span class="text-gray-400">="</span><span class="text-green-400">appAccordionItem</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-item</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item4.isOpen()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-header</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item4.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[attr.aria-expanded]</span><span class="text-gray-400">="</span><span class="text-green-400">item4.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">(click)</span><span class="text-gray-400">="</span><span class="text-green-400">item4.toggle()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+      <span class="text-white">Accordion Item #1</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-wrapper</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-inner</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido del primer elemento.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
 </div>
 
 <h2 class="text-3xl font-medium text-gray-900 mb-6">Flush</h2>
@@ -186,7 +216,22 @@
 </div>
 
 <div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
-  <pre class="text-sm leading-relaxed"><code></code></pre>
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordion</span> <span class="text-yellow-300">[defaultOpen]</span><span class="text-gray-400">="</span><span class="text-green-400">0</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion accordion-flush</span><span class="text-gray-400">"&gt;</span>
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordionItem</span> <span class="text-yellow-300">#item1</span><span class="text-gray-400">="</span><span class="text-green-400">appAccordionItem</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-item</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-header</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[attr.aria-expanded]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">(click)</span><span class="text-gray-400">="</span><span class="text-green-400">item1.toggle()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+      <span class="text-white">Accordion Item #1</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-wrapper</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-inner</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido del primer elemento.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
 </div>
 
 <h2 class="text-3xl font-medium text-gray-900 mb-6">Ghost</h2>
@@ -249,7 +294,22 @@
 </div>
 
 <div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
-  <pre class="text-sm leading-relaxed"><code></code></pre>
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordion</span> <span class="text-yellow-300">[defaultOpen]</span><span class="text-gray-400">="</span><span class="text-green-400">0</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion accordion-ghost</span><span class="text-gray-400">"&gt;</span>
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordionItem</span> <span class="text-yellow-300">#item1</span><span class="text-gray-400">="</span><span class="text-green-400">appAccordionItem</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-item</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-header</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[attr.aria-expanded]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">(click)</span><span class="text-gray-400">="</span><span class="text-green-400">item1.toggle()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+      <span class="text-white">Accordion Item #1</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-wrapper</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-inner</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido del primer elemento.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
 </div>
 
 <h2 class="text-3xl font-medium text-gray-900 mb-6">Elevated</h2>
@@ -312,5 +372,20 @@
 </div>
 
 <div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
-  <pre class="text-sm leading-relaxed"><code></code></pre>
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordion</span> <span class="text-yellow-300">[defaultOpen]</span><span class="text-gray-400">="</span><span class="text-green-400">0</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion accordion-elevated</span><span class="text-gray-400">"&gt;</span>
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">appAccordionItem</span> <span class="text-yellow-300">#item1</span><span class="text-gray-400">="</span><span class="text-green-400">appAccordionItem</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-item</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">type</span><span class="text-gray-400">="</span><span class="text-green-400">button</span><span class="text-gray-400">"</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-header</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[class.is-open]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[attr.aria-expanded]</span><span class="text-gray-400">="</span><span class="text-green-400">item1.isOpen()</span><span class="text-gray-400">"</span> <span class="text-yellow-300">(click)</span><span class="text-gray-400">="</span><span class="text-green-400">item1.toggle()</span><span class="text-gray-400">"</span><span class="text-gray-400">&gt;</span>
+      <span class="text-white">Accordion Item #1</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-wrapper</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body-inner</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">accordion-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido del primer elemento.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+<span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
 </div>
