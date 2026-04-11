@@ -1,1 +1,316 @@
-<p>accordion works!</p>
+<h1 class="text-3xl font-medium text-gray-900 mb-6">Accordion</h1>
+<p class="text-gray-500 mb-8">Crear los acordeones mediante las clases utilitarias creadas de TailwindCSS. Usa los ejemplos adjuntos para seguir la correcta estructura de creación.</p>
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Básico</h2>
+<p class="text-gray-500 mb-5">Haz clic en los acordeones de abajo para expandir o contraer su contenido.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <div appAccordion [defaultOpen]="0" class="accordion">
+    <div appAccordionItem #item1="appAccordionItem" class="accordion-item" [class.is-open]="item1.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item1.isOpen()" [attr.aria-expanded]="item1.isOpen()" (click)="item1.toggle()">
+        Accordion Item #1
+
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del primer elemento. Puedes incluir <strong>cualquier HTML</strong> aquí dentro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item2="appAccordionItem" class="accordion-item" [class.is-open]="item2.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item2.isOpen()" [attr.aria-expanded]="item2.isOpen()" (click)="item2.toggle()">
+        Accordion Item #2
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del segundo elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item3="appAccordionItem" class="accordion-item" [class.is-open]="item3.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item3.isOpen()" [attr.aria-expanded]="item3.isOpen()" (click)="item3.toggle()">
+        Accordion Item #3
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del tercer elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre class="text-sm leading-relaxed"><code></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Simultáneos</h2>
+<p class="text-gray-500 mb-5">Permite tener varios acordeones abiertos al mismo tiempo.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <div appAccordion [multi]="true" [defaultOpen]="null" class="accordion">
+    <div appAccordionItem #item4="appAccordionItem" class="accordion-item" [class.is-open]="item4.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item4.isOpen()" [attr.aria-expanded]="item4.isOpen()" (click)="item4.toggle()">
+        Accordion Item #1
+
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del primer elemento. Puedes incluir <strong>cualquier HTML</strong> aquí dentro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item5="appAccordionItem" class="accordion-item" [class.is-open]="item5.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item5.isOpen()" [attr.aria-expanded]="item5.isOpen()" (click)="item5.toggle()">
+        Accordion Item #2
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del segundo elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item6="appAccordionItem" class="accordion-item" [class.is-open]="item6.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item6.isOpen()" [attr.aria-expanded]="item6.isOpen()" (click)="item6.toggle()">
+        Accordion Item #3
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del tercer elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre class="text-sm leading-relaxed"><code></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Flush</h2>
+<p class="text-gray-500 mb-5">Acordeones sin bordes externos.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <div appAccordion [defaultOpen]="0" class="accordion accordion-flush">
+    <div appAccordionItem #item7="appAccordionItem" class="accordion-item" [class.is-open]="item7.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item7.isOpen()" [attr.aria-expanded]="item7.isOpen()" (click)="item7.toggle()">
+        Accordion Item #1
+
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del primer elemento. Puedes incluir <strong>cualquier HTML</strong> aquí dentro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item8="appAccordionItem" class="accordion-item" [class.is-open]="item8.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item8.isOpen()" [attr.aria-expanded]="item8.isOpen()" (click)="item8.toggle()">
+        Accordion Item #2
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del segundo elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item9="appAccordionItem" class="accordion-item" [class.is-open]="item9.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item9.isOpen()" [attr.aria-expanded]="item9.isOpen()" (click)="item9.toggle()">
+        Accordion Item #3
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del tercer elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre class="text-sm leading-relaxed"><code></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Ghost</h2>
+<p class="text-gray-500 mb-5">Acordeones sin bordes.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <div appAccordion [defaultOpen]="0" class="accordion accordion-ghost">
+    <div appAccordionItem #item10="appAccordionItem" class="accordion-item" [class.is-open]="item10.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item10.isOpen()" [attr.aria-expanded]="item10.isOpen()" (click)="item10.toggle()">
+        Accordion Item #1
+
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del primer elemento. Puedes incluir <strong>cualquier HTML</strong> aquí dentro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item11="appAccordionItem" class="accordion-item" [class.is-open]="item11.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item11.isOpen()" [attr.aria-expanded]="item11.isOpen()" (click)="item11.toggle()">
+        Accordion Item #2
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del segundo elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item12="appAccordionItem" class="accordion-item" [class.is-open]="item12.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item12.isOpen()" [attr.aria-expanded]="item12.isOpen()" (click)="item12.toggle()">
+        Accordion Item #3
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del tercer elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre class="text-sm leading-relaxed"><code></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Elevated</h2>
+<p class="text-gray-500 mb-5">Acordeones con tarjetas separadas.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
+  <div appAccordion [defaultOpen]="0" class="accordion accordion-elevated">
+    <div appAccordionItem #item13="appAccordionItem" class="accordion-item" [class.is-open]="item13.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item13.isOpen()" [attr.aria-expanded]="item13.isOpen()" (click)="item13.toggle()">
+        Accordion Item #1
+
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del primer elemento. Puedes incluir <strong>cualquier HTML</strong> aquí dentro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item14="appAccordionItem" class="accordion-item" [class.is-open]="item14.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item14.isOpen()" [attr.aria-expanded]="item14.isOpen()" (click)="item14.toggle()">
+        Accordion Item #2
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del segundo elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div appAccordionItem #item15="appAccordionItem" class="accordion-item" [class.is-open]="item15.isOpen()">
+      <button type="button" class="accordion-header" [class.is-open]="item15.isOpen()" [attr.aria-expanded]="item15.isOpen()" (click)="item15.toggle()">
+        Accordion Item #3
+        <svg class="accordion-icon w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="accordion-body-wrapper">
+        <div class="accordion-body-inner">
+          <div class="accordion-body">
+            <p>Contenido del tercer elemento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre class="text-sm leading-relaxed"><code></code></pre>
+</div>
