@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
-import { Accordion as AccordionDirective } from '../../../directives/accordion/accordion';
-import { AccordionItem } from '../../../directives/accordion/accordion-item';
+import { LucideChevronDown } from '@lucide/angular';
+
+import { AccordionItem, Accordion as AccordionDirective } from '@eudoo-consultorias/directives';
 
 @Component({
   selector: 'app-accordion',
-  imports: [AccordionDirective, AccordionItem],
+  imports: [LucideChevronDown, AccordionDirective, AccordionItem],
   templateUrl: './accordion.html',
   styleUrl: './accordion.scss',
 })

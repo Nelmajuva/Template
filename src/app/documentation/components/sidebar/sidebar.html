@@ -1,0 +1,27 @@
+<div class="fixed top-0 left-0 h-screen w-[265px] bg-white border-r border-gray-100 flex flex-col overflow-hidden">
+  <div class="px-6 h-16 border-b border-gray-100 shrink-0"></div>
+  <nav class="flex-1 overflow-y-auto px-6 py-8 space-y-5">
+    <div>
+      <p class="text-xs font-bold text-gray-400 uppercase mb-1">Empezando</p>
+      <ul class="space-y-0.5">
+        <li>
+          <a [routerLink]="'/'" class="flex items-center justify-between py-1.5 text-sm font-medium text-gray-700 hover:text-blue-600"> Descripción general </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-gray-400 uppercase mb-1">Base</p>
+      <ul class="space-y-0.5">
+        <li>
+          <a [routerLink]="'/documentation/buttons'" class="flex items-center py-1.5 text-sm font-medium text-gray-700 hover:text-blue-600"> Botones </a>
+        </li>
+        <li>
+          <a [routerLink]="'/documentation/accordion'" class="flex items-center py-1.5 text-sm font-medium text-gray-700 hover:text-blue-600"> Acordeón </a>
+        </li>
+        <li>
+          <a [routerLink]="'/documentation/alerts'" class="flex items-center py-1.5 text-sm font-medium text-gray-700 hover:text-blue-600"> Alertas </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
