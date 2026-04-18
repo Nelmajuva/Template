@@ -10,6 +10,10 @@ export const documentationRoutes: Routes = [
     loadComponent: () => import('./pages/accordion/accordion').then((x) => x.Accordion),
   },
   {
+    path: 'alerts',
+    loadComponent: () => import('./pages/alerts/alerts').then((x) => x.Alerts),
+  },
+  {
     path: '**',
     redirectTo: 'buttons',
   },

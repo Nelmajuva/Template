@@ -11,11 +11,11 @@
   }
 
   .btn-primary {
-    @apply bg-blue-500 text-white hover:bg-blue-600;
+    @apply bg-primary-800 text-white hover:bg-primary-900;
   }
 
   .btn-light-primary {
-    @apply bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white;
+    @apply bg-primary-50 text-primary-800 hover:bg-primary-900 hover:text-white;
   }
 
   .btn-secondary {
@@ -35,11 +35,11 @@
   }
 
   .btn-info {
-    @apply bg-violet-600 text-white hover:bg-violet-700;
+    @apply bg-blue-500 text-white hover:bg-blue-600;
   }
 
   .btn-light-info {
-    @apply bg-violet-50 text-violet-700 hover:bg-violet-700 hover:text-white;
+    @apply bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white;
   }
 
   .btn-warning {
