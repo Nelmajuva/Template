@@ -1,5 +1,4 @@
-<h1 class="text-3xl font-medium text-gray-900 mb-6">Accordion</h1>
-<p class="text-gray-500 mb-8">Crear los acordeones mediante las clases utilitarias creadas de TailwindCSS. Usa los ejemplos adjuntos para seguir la correcta estructura de creación.</p>
+<h1 class="text-5xl font-medium text-gray-900 mb-6">Accordion</h1>
 <h2 class="text-3xl font-medium text-gray-900 mb-6">Básico</h2>
 <p class="text-gray-500 mb-5">Haz clic en los acordeones de abajo para expandir o contraer su contenido.</p>
 
@@ -76,7 +75,7 @@
 <p class="text-gray-500 mb-5">Permite tener varios acordeones abiertos al mismo tiempo.</p>
 
 <div class="rounded-lg border border-gray-100 p-8 flex flex-wrap gap-3 items-center">
-  <div appAccordion [multi]="true" [defaultOpen]="null" class="accordion">
+  <div appAccordion [multi]="true" [defaultOpen]="[0, 2]" class="accordion">
     <div appAccordionItem #item4="appAccordionItem" class="accordion-item" [class.is-open]="item4.isOpen()">
       <button type="button" class="accordion-header" [class.is-open]="item4.isOpen()" [attr.aria-expanded]="item4.isOpen()" (click)="item4.toggle()">
         Accordion Item #1

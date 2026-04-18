@@ -2,5 +2,7 @@
 
 @use 'tailwindcss';
 
+@use './scss/core/theme';
+
 @use './scss/components/buttons';
 @use './scss/components/accordion';

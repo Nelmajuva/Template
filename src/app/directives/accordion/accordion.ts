@@ -9,7 +9,7 @@ import { AccordionItem } from './accordion-item';
 })
 export class Accordion implements AfterContentInit, AfterViewInit {
   @Input() multi = false;
-  @Input() defaultOpen: number | null = 0;
+  @Input() defaultOpen: number | number[] | null = 0;
 
   @ContentChildren(AccordionItem)
   private items!: QueryList<AccordionItem>;
@@ -17,9 +17,15 @@ export class Accordion implements AfterContentInit, AfterViewInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
+  private isOpenByDefault(index: number): boolean {
+    if (this.defaultOpen === null) return false;
+    if (Array.isArray(this.defaultOpen)) return this.defaultOpen.includes(index);
+    return this.defaultOpen === index;
+  }
+
   ngAfterContentInit(): void {
     this.items.forEach((item, index) => {
-      item.setOpen(this.defaultOpen === index);
+      item.setOpen(this.isOpenByDefault(index));
       item.toggle = () => this.toggle(item);
     });
   }
