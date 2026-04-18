@@ -5,6 +5,34 @@
     font-weight: 100;
     font-style: normal;
     font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
   }
 
   @font-face {
@@ -13,6 +41,16 @@
     font-weight: 300;
     font-style: normal;
     font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
   }
 
   @font-face {
@@ -21,6 +59,16 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
   }
 
   @font-face {
@@ -29,6 +77,16 @@
     font-weight: 500;
     font-style: normal;
     font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
   }
 
   @font-face {
@@ -37,6 +95,16 @@
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
   }
 
   @font-face {
@@ -45,12 +113,76 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+    font-display: optional;
+  }
+
+  @font-face {
+    font-family: 'GeistVF';
+    src: url('/fonts/Geist[wght].woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: 'GeistVF';
+    src: url('/fonts/Geist-Italic[wght].woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+    font-display: block;
   }
 
   @theme default {
-    --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-sans: 'GeistVF', 'Geist', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: 'GeistVF', 'Geist', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'GeistVF', 'Geist', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
     --color-red-50: oklch(97.1% 0.013 17.38);
     --color-red-100: oklch(93.6% 0.032 17.717);
