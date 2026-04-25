@@ -66,6 +66,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": ["local.eudoo.com.co"],
+            "hmr": true
+          },
           "configurations": {
             "production": {
               "buildTarget": "eudoo-consultorias:build:production"

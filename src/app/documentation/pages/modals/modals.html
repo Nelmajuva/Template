@@ -1,1 +1,273 @@
-<p>modals works!</p>
+<h1 class="text-5xl font-medium text-gray-900 mb-6">Modals</h1>
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Inicio</h2>
+<p class="text-gray-500 mb-5">Haz clic en el botón de alternancia que aparece a continuación para ver una ventana modal ligeramente personalizada con un botón de icono de cierre personalizado.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-col flex-wrap gap-3 items-start">
+  <button class="btn btn-primary" [appModalTrigger]="'basicModal'">Abrir modal básico</button>
+
+  <div class="modal" appModal="basicModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Título del modal</h3>
+          <button class="modal-close" [appModalTrigger]="'basicModal'" modalAction="close" aria-label="Cerrar">
+            <svg lucideX></svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <p>Contenido del modal aquí.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-light" [appModalTrigger]="'basicModal'" modalAction="close">Cancelar</button>
+          <button class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-primary</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'basicModal'</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abrir modal básico</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal</span><span class="text-gray-400">"</span> <span class="text-yellow-300">appModal</span><span class="text-gray-400">="</span><span class="text-green-400">basicModal</span><span class="text-gray-400">"&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-dialog</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-content</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-header</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">h3</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-title</span><span class="text-gray-400">"&gt;</span><span class="text-white">Título del modal</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">h3</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'basicModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">aria-label</span><span class="text-gray-400">="</span><span class="text-green-400">Cerrar</span><span class="text-gray-400">"&gt;</span>
+            <span class="text-gray-400">&lt;</span><span class="text-blue-400">svg</span> <span class="text-yellow-300">lucideX</span><span class="text-gray-400">&gt;&lt;/</span><span class="text-blue-400">svg</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido del modal aquí.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-footer</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'basicModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"&gt;</span><span class="text-white">Cancelar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-primary</span><span class="text-gray-400">"&gt;</span><span class="text-white">Guardar cambios</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
+</div>
+
+<h2 class="text-3xl font-medium text-gray-900 mb-6">Otros tamaños</h2>
+<p class="text-gray-500 mb-5">Haz clic en los botones que aparecen a continuación para ver diferentes modales ligeramente personalizados con un botón de icono de cierre personalizados.</p>
+
+<div class="rounded-lg border border-gray-100 p-8 flex flex-col flex-wrap gap-3 items-start">
+  <button class="btn btn-primary" [appModalTrigger]="'fullModal'">Abrir modal pantalla completa</button>
+
+  <div class="modal" appModal="fullModal">
+    <div class="modal-dialog modal-full">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal pantalla completa</h3>
+          <button class="modal-close" [appModalTrigger]="'fullModal'" modalAction="close" aria-label="Cerrar">
+            <svg lucideX></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Contenido extenso aquí.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" [appModalTrigger]="'fullModal'" modalAction="close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-secondary" [appModalTrigger]="'xlModal'">Abrir modal pantalla grande</button>
+
+  <div class="modal" appModal="xlModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal pantalla grande</h3>
+          <button class="modal-close" [appModalTrigger]="'xlModal'" modalAction="close" aria-label="Cerrar">
+            <svg lucideX></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Contenido extenso aquí.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" [appModalTrigger]="'xlModal'" modalAction="close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-warning" [appModalTrigger]="'lgModal'">Abrir modal pantalla media</button>
+
+  <div class="modal" appModal="lgModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal pantalla media</h3>
+          <button class="modal-close" [appModalTrigger]="'lgModal'" modalAction="close" aria-label="Cerrar">
+            <svg lucideX></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Contenido extenso aquí.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" [appModalTrigger]="'lgModal'" modalAction="close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-success" [appModalTrigger]="'mdModal'">Abrir modal pantalla normal</button>
+
+  <div class="modal" appModal="mdModal">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal pantalla normal</h3>
+          <button class="modal-close" [appModalTrigger]="'mdModal'" modalAction="close" aria-label="Cerrar">
+            <svg lucideX></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Contenido extenso aquí.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" [appModalTrigger]="'mdModal'" modalAction="close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-info" [appModalTrigger]="'smModal'">Abrir modal pantalla pequeña</button>
+
+  <div class="modal" appModal="smModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal pantalla pequeña</h3>
+          <button class="modal-close" [appModalTrigger]="'smModal'" modalAction="close" aria-label="Cerrar">
+            <svg lucideX></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Contenido extenso aquí.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" [appModalTrigger]="'smModal'" modalAction="close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl bg-gray-800 p-6 overflow-x-auto mb-10">
+  <pre
+    class="text-sm leading-relaxed"
+  ><code><span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-primary</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'fullModal'</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abrir modal pantalla completa</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal</span><span class="text-gray-400">"</span> <span class="text-yellow-300">appModal</span><span class="text-gray-400">="</span><span class="text-green-400">fullModal</span><span class="text-gray-400">"&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-dialog modal-full</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-content</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-header</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">h3</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-title</span><span class="text-gray-400">"&gt;</span><span class="text-white">Modal pantalla completa</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">h3</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'fullModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">aria-label</span><span class="text-gray-400">="</span><span class="text-green-400">Cerrar</span><span class="text-gray-400">"&gt;</span>
+            <span class="text-gray-400">&lt;</span><span class="text-blue-400">svg</span> <span class="text-yellow-300">lucideX</span><span class="text-gray-400">&gt;&lt;/</span><span class="text-blue-400">svg</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido extenso aquí.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-footer</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'fullModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"&gt;</span><span class="text-white">Cerrar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-secondary</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'xlModal'</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abrir modal pantalla grande</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal</span><span class="text-gray-400">"</span> <span class="text-yellow-300">appModal</span><span class="text-gray-400">="</span><span class="text-green-400">xlModal</span><span class="text-gray-400">"&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-dialog modal-xl</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-content</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-header</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">h3</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-title</span><span class="text-gray-400">"&gt;</span><span class="text-white">Modal pantalla grande</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">h3</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'xlModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">aria-label</span><span class="text-gray-400">="</span><span class="text-green-400">Cerrar</span><span class="text-gray-400">"&gt;</span>
+            <span class="text-gray-400">&lt;</span><span class="text-blue-400">svg</span> <span class="text-yellow-300">lucideX</span><span class="text-gray-400">&gt;&lt;/</span><span class="text-blue-400">svg</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido extenso aquí.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-footer</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'xlModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"&gt;</span><span class="text-white">Cerrar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-warning</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'lgModal'</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abrir modal pantalla media</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal</span><span class="text-gray-400">"</span> <span class="text-yellow-300">appModal</span><span class="text-gray-400">="</span><span class="text-green-400">lgModal</span><span class="text-gray-400">"&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-dialog modal-lg</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-content</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-header</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">h3</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-title</span><span class="text-gray-400">"&gt;</span><span class="text-white">Modal pantalla media</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">h3</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'lgModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">aria-label</span><span class="text-gray-400">="</span><span class="text-green-400">Cerrar</span><span class="text-gray-400">"&gt;</span>
+            <span class="text-gray-400">&lt;</span><span class="text-blue-400">svg</span> <span class="text-yellow-300">lucideX</span><span class="text-gray-400">&gt;&lt;/</span><span class="text-blue-400">svg</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido extenso aquí.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-footer</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'lgModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"&gt;</span><span class="text-white">Cerrar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-success</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'mdModal'</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abrir modal pantalla normal</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal</span><span class="text-gray-400">"</span> <span class="text-yellow-300">appModal</span><span class="text-gray-400">="</span><span class="text-green-400">mdModal</span><span class="text-gray-400">"&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-dialog modal-md</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-content</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-header</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">h3</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-title</span><span class="text-gray-400">"&gt;</span><span class="text-white">Modal pantalla normal</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">h3</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'mdModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">aria-label</span><span class="text-gray-400">="</span><span class="text-green-400">Cerrar</span><span class="text-gray-400">"&gt;</span>
+            <span class="text-gray-400">&lt;</span><span class="text-blue-400">svg</span> <span class="text-yellow-300">lucideX</span><span class="text-gray-400">&gt;&lt;/</span><span class="text-blue-400">svg</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido extenso aquí.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-footer</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'mdModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"&gt;</span><span class="text-white">Cerrar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-info</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'smModal'</span><span class="text-gray-400">"&gt;</span><span class="text-white">Abrir modal pantalla pequeña</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+
+  <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal</span><span class="text-gray-400">"</span> <span class="text-yellow-300">appModal</span><span class="text-gray-400">="</span><span class="text-green-400">smModal</span><span class="text-gray-400">"&gt;</span>
+    <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-dialog modal-sm</span><span class="text-gray-400">"&gt;</span>
+      <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-content</span><span class="text-gray-400">"&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-header</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">h3</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-title</span><span class="text-gray-400">"&gt;</span><span class="text-white">Modal pantalla pequeña</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">h3</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'smModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"</span> <span class="text-yellow-300">aria-label</span><span class="text-gray-400">="</span><span class="text-green-400">Cerrar</span><span class="text-gray-400">"&gt;</span>
+            <span class="text-gray-400">&lt;</span><span class="text-blue-400">svg</span> <span class="text-yellow-300">lucideX</span><span class="text-gray-400">&gt;&lt;/</span><span class="text-blue-400">svg</span><span class="text-gray-400">&gt;</span>
+          <span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-body</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span><span class="text-white">Contenido extenso aquí.</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">p</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">modal-footer</span><span class="text-gray-400">"&gt;</span>
+          <span class="text-gray-400">&lt;</span><span class="text-blue-400">button</span> <span class="text-yellow-300">class</span><span class="text-gray-400">="</span><span class="text-green-400">btn btn-light</span><span class="text-gray-400">"</span> <span class="text-yellow-300">[appModalTrigger]</span><span class="text-gray-400">="</span><span class="text-green-400">'smModal'</span><span class="text-gray-400">"</span> <span class="text-yellow-300">modalAction</span><span class="text-gray-400">="</span><span class="text-green-400">close</span><span class="text-gray-400">"&gt;</span><span class="text-white">Cerrar</span><span class="text-gray-400">&lt;/</span><span class="text-blue-400">button</span><span class="text-gray-400">&gt;</span>
+        <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+      <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+    <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>
+  <span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span></code></pre>
+</div>

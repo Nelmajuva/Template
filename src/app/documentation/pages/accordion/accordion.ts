@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { LucideChevronDown } from '@lucide/angular';
 
 import { AccordionItem, Accordion as AccordionDirective } from '@eudoo-consultorias/directives';
+import { RoutingUtil } from '@eudoo-consultorias/utilities';
 
 @Component({
   selector: 'app-accordion',
@@ -10,4 +11,8 @@ import { AccordionItem, Accordion as AccordionDirective } from '@eudoo-consultor
   templateUrl: './accordion.html',
   styleUrl: './accordion.scss',
 })
-export class Accordion {}
+export class Accordion implements OnInit {
+  ngOnInit(): void {
+    RoutingUtil.scrollToTop();
+  }
+}

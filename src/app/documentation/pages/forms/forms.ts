@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { LucideChessQueen } from '@lucide/angular';
+
+import { RoutingUtil } from '@eudoo-consultorias/utilities';
 
 @Component({
   selector: 'app-forms',
@@ -8,4 +10,8 @@ import { LucideChessQueen } from '@lucide/angular';
   templateUrl: './forms.html',
   styleUrl: './forms.scss',
 })
-export class Forms {}
+export class Forms implements OnInit {
+  ngOnInit(): void {
+    RoutingUtil.scrollToTop();
+  }
+}

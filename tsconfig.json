@@ -15,7 +15,9 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "@eudoo-consultorias/directives": ["./src/app/directives/index.ts"]
+      "@eudoo-consultorias/directives": ["./src/app/directives/index.ts"],
+      "@eudoo-consultorias/utilities": ["./src/app/utilities/index.ts"],
+      "@eudoo-consultorias/services/web": ["./src/app/services/web/index.ts"]
     }
   },
   "angularCompilerOptions": {

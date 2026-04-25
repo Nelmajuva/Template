@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { LucideShieldAlert } from '@lucide/angular';
+
+import { RoutingUtil } from '@eudoo-consultorias/utilities';
 
 @Component({
   selector: 'app-alerts',
@@ -8,4 +10,8 @@ import { LucideShieldAlert } from '@lucide/angular';
   templateUrl: './alerts.html',
   styleUrl: './alerts.scss',
 })
-export class Alerts {}
+export class Alerts implements OnInit {
+  ngOnInit(): void {
+    RoutingUtil.scrollToTop();
+  }
+}
