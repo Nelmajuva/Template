@@ -27,7 +27,6 @@ export class Modal implements OnInit, OnDestroy {
 
   private backdrop: HTMLElement | null = null;
   private closing = false;
-
   private escListener?: () => void;
 
   ngOnInit(): void {
@@ -38,11 +37,20 @@ export class Modal implements OnInit, OnDestroy {
     this.modalService.unregister(this.appModal);
     this.removeBackdrop();
     this.escListener?.();
-    if (this.isBrowser) document.body.classList.remove('modal-open');
+
+    if (this.isBrowser) {
+      document.body.classList.remove('modal-open');
+      document.body.style.removeProperty('padding-right');
+    }
   }
 
   open(): void {
     if (!this.isBrowser || this.closing || this.isOpen()) return;
+
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
     const el = this.elementRef.nativeElement;
     el.style.display = 'flex';
@@ -74,6 +82,7 @@ export class Modal implements OnInit, OnDestroy {
       el.style.display = 'none';
       el.classList.remove('modal-hiding');
       document.body.classList.remove('modal-open');
+      document.body.style.removeProperty('padding-right');
       this.removeBackdrop();
       this.isOpen.set(false);
       this.closing = false;

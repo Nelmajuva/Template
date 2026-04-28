@@ -56,7 +56,11 @@
 
   body.modal-open {
     @apply overflow-hidden;
-    padding-right: var(--scrollbar-width, 0px);
+    scrollbar-gutter: auto;
+  }
+
+  html:has(body.modal-open) {
+    scrollbar-gutter: auto;
   }
 
   .modal {
