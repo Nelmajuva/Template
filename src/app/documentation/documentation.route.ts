@@ -2,6 +2,10 @@ import { Routes } from '@angular/router';
 
 export const documentationRoutes: Routes = [
   {
+    path: '',
+    loadComponent: () => import('./pages/start/start').then((x) => x.Start),
+  },
+  {
     path: 'accordion',
     loadComponent: () => import('./pages/accordion/accordion').then((x) => x.Accordion),
   },
@@ -23,6 +27,6 @@ export const documentationRoutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'buttons',
+    redirectTo: '',
   },
 ];

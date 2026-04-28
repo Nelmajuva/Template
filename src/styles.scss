@@ -2,6 +2,7 @@
 
 @use 'tailwindcss';
 
+@use './scss/core/reset';
 @use './scss/core/theme';
 
 @use './scss/components/buttons';

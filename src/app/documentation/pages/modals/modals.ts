@@ -2,9 +2,9 @@ import { Component, inject, OnInit } from '@angular/core';
 
 import { LucideX } from '@lucide/angular';
 
-import { Modal as ModalService } from '@eudoo-consultorias/services/web';
-import { Modal, ModalTrigger } from '@eudoo-consultorias/directives';
 import { RoutingUtil } from '@eudoo-consultorias/utilities';
+import { Modal, ModalTrigger } from '@eudoo-consultorias/directives';
+import { Modal as ModalService } from '@eudoo-consultorias/services/web';
 
 @Component({
   selector: 'app-modals',
